@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  service_1:
+    build:
+      context: ./service_1
+    ports:
+      - "8080:8080"
+    depends_on:
+      - service_2
+
+  service_2:
+    build:
+      context: ./service_2
+    ports:
+      - "8081:8081"
